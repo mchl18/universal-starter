@@ -26,7 +26,7 @@
     "compile:server": "tsc -p server.tsconfig.json",
     "generate:prerender": "cd dist && node prerender",
     "serve:prerender": "cd dist/browser && http-server",
-    "serve:ssr": "node dist/server"
+    "serve:ssr": "node dist/server/main.js --max-old-space-size=16384"
   },
   "pre-commit": [],
   "private": true,
@@ -46,6 +46,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
     "core-js": "^2.4.1",
     "express": "^4.15.2",
+    "os-utils": "0.0.14",
     "reflect-metadata": "^0.1.10",
     "rxjs": "6.3.3",
     "zone.js": "^0.8.26"
